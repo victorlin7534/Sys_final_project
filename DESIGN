@@ -1,8 +1,12 @@
 Jason Tung, Larry Wong, Victor Lin
 
-Statement: This project emulates the functionality of coding bat in which the user writes code in accordance with the prompt. The user is then notified whether or not he/she met the requirements.
+Statement: This project emulates the functionality of coding bat in which the user writes code in accordance with the prompt. 
+The user is then notified whether or not he/she has met the requirements. If possible, we will try to expand it to multiplayer
+where multiple people could compete on the problem.
 
-Usage: The program uses a GUI to send and receive information to and from the user. It also serves a text editor for the coding section of the game.
+Usage: The program uses a GUI to send and receive information to and from the user. There will be text box where the user will 
+type in the code, a button to submit the code, a display showing the number of problems the user has completed successfully and 
+a display for the prompt. When the user submits his/her code, there will be a pop-up notifying the user of his/her success/failure. 
 
 
 Design:
@@ -11,9 +15,13 @@ Semaphores: limiting the number of user that can run the game at once (5?)
 Processes: forking to compile and run code from different users simultaneously
 Pipes/sockets: user to server/network communication
 Signals: signal handling for exiting program
+Arrays will be used, and code submissions will be run/checked in queue-like fashion
+
+Work Distribution: Whomever is capable of doing something whenever will complete a part of the project as he sees fit.
 
 
 Timeline:
-	12/28 Project proposal
 	(time of confirmation) create basic framework: client to server/network communication
+	(~5 or 7 days) complete all underlying user input functionalities & prompts/solutions
+	(~5 or 7 days) extend functionalities to GUI 
 	
