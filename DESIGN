@@ -4,24 +4,23 @@ Statement: This project emulates the functionality of coding bat in which the us
 The user is then notified whether or not he/she has met the requirements. If possible, we will try to expand it to multiplayer
 where multiple people could compete on the problem.
 
-Usage: The program uses a GUI to send and receive information to and from the user. There will be text box where the user will 
-type in the code, a button to submit the code, a display showing the number of problems the user has completed successfully and 
-a display for the prompt. When the user submits his/her code, there will be a pop-up notifying the user of his/her success/failure. 
-
+Usage: The problem will first display a problem/algo the user needs to solve. Then, it will open a text editor like vim or emacs 
+and allow the user to write their code. When the user saves the file and closes the editor, we will compile and run the program 
+(with a specified time-out). We will display a return screen with the trials passed and failed along with the input. 
 
 Design:
-Files: coding prompts and their solutions will be stored in files
-Semaphores: limiting the number of user that can run the game at once (5?)
-Processes: forking to compile and run code from different users simultaneously
-Pipes/sockets: user to server/network communication
-Signals: signal handling for exiting program
-Arrays will be used, and code submissions will be run/checked in queue-like fashion
+1) Exec family: compiles and runs the code
+2) Read/write: picking prompts, grabbing user answers, sending user information, etc.
+3) Files: coding prompts and their solutions will be stored in files
+4) Semaphores: limiting the number of user that can run the game at once
+5) Processes: forking to compile and run code from different users simultaneously
+6) Pipes/sockets: user to server/network communication
+7) Signals: signal handling for exiting program
+8) Arrays will be used, and code submissions will be run/checked in queue-like fashion
 
 Work Distribution: Whomever is capable of doing something whenever will complete a part of the project as he sees fit.
 
-
 Timeline:
 	(time of confirmation) create basic framework: client to server/network communication
-	(~5 or 7 days) complete all underlying user input functionalities & prompts/solutions
-	(~5 or 7 days) extend functionalities to GUI 
-	
+	(~5 or 7 days) complete all underlying user input functionalities 
+	(~5 or 7 days) create prompts/solutions & refine and debug
