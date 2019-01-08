@@ -5,7 +5,7 @@ The user is then notified whether or not he/she has met the requirements. If pos
 where multiple people could compete on the problem.
 
 Usage: The problem will first display a problem/algo the user needs to solve. Then, it will open a text editor like vim or emacs 
-and allow the user to write their code. When the user saves the file and closes the editor, we will compile and run the program 
+and allow the user to write their code in C. When the user saves the file and closes the editor, we will compile and run the program 
 (with a specified time-out). We will display a return screen with the trials passed and failed along with the input. 
 
 Design:
@@ -24,3 +24,16 @@ Timeline:
 	(time of confirmation) create basic framework: client to server/network communication
 	(~5 or 7 days) complete all underlying user input functionalities 
 	(~5 or 7 days) create prompts/solutions & refine and debug
+	
+Edits:
+	We won't be creating our own text editor. Rather, we will call a built-in text editor, something like emacs or nano, 
+	to open a file we send to the user through pipes. The stub file will contain instructions on the prompt, the function 
+	header, etc.
+
+	After the user saves the file and exits the text editor, the program will resume and send the file back to the server. 
+	The solutions will need to be in C, and that will be specified in the stub file because we will use execvp to gcc a 
+	driver file that imports the file sent by the user. Within the driver file, we will test the functions against the 
+	actual answers, printing either that each test case was passed or failed along with other diagnostics such as 
+	expected/actual output.
+	
+	Additionally, we will have generous timeouts in case of a nonterminating loop or forkbomb.
