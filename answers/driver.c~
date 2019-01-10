@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#import <stub.c>
+
+int test(int a, int b, int expected){
+  int passed = sum(a,b) == expected;
+  if (passed){
+    printf("PASSED,sum(%d,%d),EXPECTED,%d,ACTUAL,%d",a,b,expected,sum(a,b));
+  }
+  else{
+     printf("FAILED,sum(%d,%d),EXPECTED,%d,ACTUAL,%d",a,b,expected,sum(a,b));
+  }
+}
+
+
+
+
