@@ -12,9 +12,7 @@
 #ifndef BAT_H
 #define BAT_H
 
-#define BUFFER_SIZE 256
-#define PORT "9001"
-#define TEST_IP "127.0.0.1"
+#define BUFFER_SIZE 8192
 
 void error_check(int i, char *s);
 int server_setup();

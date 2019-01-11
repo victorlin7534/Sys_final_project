@@ -1,19 +1,23 @@
 #include "bat.h"
 
 int main(int argc, char **argv) {
-
-  int server_socket;
+  int server_socket = client_setup(argv[1]);
   char buffer[BUFFER_SIZE];
 
-  if (argc == 2) server_socket = client_setup(argv[1]);
-  else server_socket = client_setup(TEST_IP);
-
   while (1) {
-    printf("enter data: ");
-    fgets(buffer, sizeof(buffer), stdin);
-    *strchr(buffer, '\n') = 0;
-    write(server_socket, buffer, sizeof(buffer));
     read(server_socket, buffer, sizeof(buffer));
-    printf("received: [%s]\n", buffer);
+    
+    
+    int temp = open("temp.c",O_CREAT|O_WRONLY,0644);
+    write(temp,buffer,sizeof(buffer));
+    execvp("emacs","temp.c");
+    close(temp);
+
+    char check[BUFFER_SIZE];
+    temp = open("temp.c",O_RDONLY);
+    read(temp,check,sizeof(check));
+    write(server_socket,check,sizeof(check));
+    close(temp);
+    remove("temp.c");
   }
 }

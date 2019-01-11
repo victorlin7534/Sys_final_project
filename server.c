@@ -2,9 +2,9 @@
 
 void subserver(int client_socket) {
   char buffer[BUFFER_SIZE];
+  int state = 0;
   while (read(client_socket, buffer, sizeof(buffer))) {
-    printf("[subserver %d] received: [%s]\n", getpid(), buffer);
-    process(buffer);
+    
     write(client_socket, buffer, sizeof(buffer));
   }
   close(client_socket);
