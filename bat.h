@@ -8,6 +8,7 @@
 #include <netdb.h>
 #include <string.h>
 #include <errno.h>
+#include <fcntl.h>
 
 #ifndef BAT_H
 #define BAT_H
