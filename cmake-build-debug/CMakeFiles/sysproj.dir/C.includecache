@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jason/sysproj/answers/diff21.c
+
+/Users/jason/sysproj/answers/fib.c
+stdio.h
+-
+stdlib.h
+-
+
