@@ -37,11 +37,6 @@ int server_connect(int sd) {
   socklen_t sock_size = sizeof(client_address);
   int client_socket = accept(sd, (struct sockaddr *)&client_address, &sock_size);
   error_check(client_socket, "server accept");
-
-  struct sockadd_in *sin = (struct sockaddr_in*)&client_address;
-  char *ip = inet_ntoa(sin.sin_addr);
-  char loc[128] = strcat("/temp/",ip);
-  excvp("mkdir","loc");
   
   return client_socket;
 }
