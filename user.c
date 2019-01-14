@@ -4,8 +4,9 @@ int main(int argc, char **argv) {
   int server_socket = client_setup(argv[1]);
   char buffer[BUFFER_SIZE];
 
-  int state = rand() % ;
-  write(server_socket);//ask server for first prompt
+  char state[8];
+  sprintf(state,"%d",rand()%);
+  write(server_socket,state,sizeof(state));//ask server for first prompt
 
   while (1){
     read(server_socket, buffer, sizeof(buffer));
@@ -26,8 +27,8 @@ int main(int argc, char **argv) {
     read(server_socket, buffer, sizeof(buffer));
     //check if user input was correct
     if(strcmp(buffer,"SUCCESS")==0){
-      state = rand()%;
-      write(server_socket,,);//send new number/prompt
+      sprintf(state,"%d",rand()%);
+      write(server_socket,state,sizeof(state));//send new number/prompt
     }
   }
 }

@@ -2,8 +2,12 @@
 
 void subserver(int client_socket) {
   char buffer[BUFFER_SIZE];
+  char *dummy;
+  char loc[128] = strcat("/temp/",getpid());
+  excvp("mkdir",loc);
+  
   while (read(client_socket, buffer, sizeof(buffer))) {
-  	char *q = question_names[];
+    char q[50] = question_names[strtol(buffer,&dummy,10)];
 
     int temp = open(strcat("/questions/",q),O_RDWR);
     read(temp,buffer,sizeof(buffer));
@@ -11,8 +15,7 @@ void subserver(int client_socket) {
     close(temp);
 
     read(client_socket, buffer, sizeof(buffer));
-    char *loc = strcat("/temp/",q);//get user to tell server its ip
-    temp = open(loc,O_CREAT|O_WRONLY,0644);
+    temp = open(strcat(loc,q),O_CREAT|O_WRONLY,0644);
     write(temp,buffer,sizeof(buffer));
     close(temp);
 
@@ -21,9 +24,9 @@ void subserver(int client_socket) {
     if(/*success*/) buffer = "SUCCESS";
     else buffer = "FAILED";
     write(client_socket,buffer,sizeof(buffer));
-    remove(loc);
   }
   close(client_socket);
+  excvp("rm","-rf",strcat("/temp/",getpid()));
   exit(0);
 }
 
