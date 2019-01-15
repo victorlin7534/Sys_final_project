@@ -92,6 +92,9 @@
 		<Unit filename="/Users/jason/sysproj/bat.h">
 			<Option target="sysproj"/>
 		</Unit>
+		<Unit filename="/Users/jason/sysproj/copy.c">
+			<Option target="sysproj"/>
+		</Unit>
 		<Unit filename="/Users/jason/sysproj/questions/base2.c">
 			<Option target="sysproj"/>
 		</Unit>

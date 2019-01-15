@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sysproj.dir/user.c.o"
   "CMakeFiles/sysproj.dir/temp/1234/sum.c.o"
   "CMakeFiles/sysproj.dir/questions/sum.c.o"
+  "CMakeFiles/sysproj.dir/copy.c.o"
   "sysproj.pdb"
   "sysproj"
 )

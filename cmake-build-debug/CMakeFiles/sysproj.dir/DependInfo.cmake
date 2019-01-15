@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/jason/sysproj/answers/sum.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/answers/sum.c.o"
   "/Users/jason/sysproj/bat.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/bat.c.o"
+  "/Users/jason/sysproj/copy.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/copy.c.o"
   "/Users/jason/sysproj/questions/base2.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/questions/base2.c.o"
   "/Users/jason/sysproj/questions/diff21.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/questions/diff21.c.o"
   "/Users/jason/sysproj/questions/gcf.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/questions/gcf.c.o"

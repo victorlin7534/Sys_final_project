@@ -15,4 +15,4 @@ add_executable(sysproj
         bat.c
         bat.h
         server.c
-        user.c temp/1234/sum.c questions/sum.c answers/answers.h)
+        user.c temp/1234/sum.c questions/sum.c answers/answers.h copy.c)

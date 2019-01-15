@@ -177,6 +177,33 @@ bat.c.s:
 	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/bat.c.s
 .PHONY : bat.c.s
 
+copy.o: copy.c.o
+
+.PHONY : copy.o
+
+# target to build an object file
+copy.c.o:
+	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/copy.c.o
+.PHONY : copy.c.o
+
+copy.i: copy.c.i
+
+.PHONY : copy.i
+
+# target to preprocess a source file
+copy.c.i:
+	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/copy.c.i
+.PHONY : copy.c.i
+
+copy.s: copy.c.s
+
+.PHONY : copy.s
+
+# target to generate assembly for a file
+copy.c.s:
+	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/copy.c.s
+.PHONY : copy.c.s
+
 questions/base2.o: questions/base2.c.o
 
 .PHONY : questions/base2.o
@@ -435,6 +462,9 @@ help:
 	@echo "... bat.o"
 	@echo "... bat.i"
 	@echo "... bat.s"
+	@echo "... copy.o"
+	@echo "... copy.i"
+	@echo "... copy.s"
 	@echo "... questions/base2.o"
 	@echo "... questions/base2.i"
 	@echo "... questions/base2.s"
