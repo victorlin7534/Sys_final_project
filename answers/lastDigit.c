@@ -1,5 +1,5 @@
 #include "answers.h"
-#import "../temp/????/lastDigit.c"
+#import "drivers/lastDigit.c"
 
 int passed = 0;
 int tested = 0;

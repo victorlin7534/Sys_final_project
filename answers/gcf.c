@@ -1,5 +1,5 @@
 #include "answers.h"
-#import "../temp/????/gcf.c"
+#import "drivers/gcf.c"
 
 int passed = 0;
 int tested = 0;

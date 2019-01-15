@@ -1,5 +1,5 @@
 #include "answers.h"
-#import "../temp/????/diff21.c"
+#import "drivers/diff21.c"
 
 int passed = 0;
 int tested = 0;

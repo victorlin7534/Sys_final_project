@@ -1,5 +1,5 @@
 #include "answers.h"
-#import "../temp/????/sum.c"
+#import "drivers/sum.c"
 
 int passed = 0;
 int tested = 0;
