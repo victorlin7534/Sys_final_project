@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
     //put prompt into file for user
     int temp = open("temp.c",O_CREAT|O_WRONLY,0644);
     write(temp,buffer,sizeof(buffer));
-    execvp("emacs","temp.c");
+    execlp("emacs","temp.c");
     close(temp);
 
     //send user's work to server

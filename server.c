@@ -3,8 +3,10 @@
 void subserver(int client_socket) {
   char buffer[BUFFER_SIZE];
   char *dummy;
-  char loc[128] = strcat("/temp/",getpid());
-  excvp("mkdir",loc);
+  char pid[50];
+  sprintf(pid,"%d",getpid());
+  char loc[128] = strcat("/temp/",pid);
+  execlp("mkdir",loc);
   
   while (read(client_socket, buffer, sizeof(buffer))) {
     char q[50] = question_names[strtol(buffer,&dummy,10)];
@@ -21,12 +23,12 @@ void subserver(int client_socket) {
 
     //testing
 
-    if(/*success*/) buffer = "SUCCESS";
-    else buffer = "FAILED";
+    if(/*success*/) strcpy(buffer,"SUCCESS");
+    else strcpy(buffer,"FAILED");
     write(client_socket,buffer,sizeof(buffer));
   }
   close(client_socket);
-  excvp("rm","-rf",strcat("/temp/",getpid()));
+  execlp("rm","-rf",strcat("/temp/",pid));
   exit(0);
 }
 
