@@ -1,13 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/sysproj.dir/answers/diff21.c.o"
   "CMakeFiles/sysproj.dir/answers/sum.c.o"
-  "CMakeFiles/sysproj.dir/answers/fib.c.o"
   "CMakeFiles/sysproj.dir/questions/base2.c.o"
   "CMakeFiles/sysproj.dir/questions/diff21.c.o"
   "CMakeFiles/sysproj.dir/questions/gcf.c.o"
   "CMakeFiles/sysproj.dir/questions/lastDigit.c.o"
   "CMakeFiles/sysproj.dir/questions/nearHundred.c.o"
-  "CMakeFiles/sysproj.dir/questions/stub.c.o"
   "CMakeFiles/sysproj.dir/bat.c.o"
   "CMakeFiles/sysproj.dir/server.c.o"
   "CMakeFiles/sysproj.dir/user.c.o"

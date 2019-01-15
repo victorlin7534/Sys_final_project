@@ -4,8 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/jason/sysproj/answers/diff21.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/answers/diff21.c.o"
-  "/Users/jason/sysproj/answers/fib.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/answers/fib.c.o"
   "/Users/jason/sysproj/answers/sum.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/answers/sum.c.o"
   "/Users/jason/sysproj/bat.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/bat.c.o"
   "/Users/jason/sysproj/questions/base2.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/questions/base2.c.o"
@@ -13,7 +11,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/jason/sysproj/questions/gcf.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/questions/gcf.c.o"
   "/Users/jason/sysproj/questions/lastDigit.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/questions/lastDigit.c.o"
   "/Users/jason/sysproj/questions/nearHundred.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/questions/nearHundred.c.o"
-  "/Users/jason/sysproj/questions/stub.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/questions/stub.c.o"
   "/Users/jason/sysproj/questions/sum.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/questions/sum.c.o"
   "/Users/jason/sysproj/server.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/server.c.o"
   "/Users/jason/sysproj/temp/1234/sum.c" "/Users/jason/sysproj/cmake-build-debug/CMakeFiles/sysproj.dir/temp/1234/sum.c.o"

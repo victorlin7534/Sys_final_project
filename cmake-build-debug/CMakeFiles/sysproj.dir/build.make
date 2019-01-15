@@ -57,22 +57,9 @@ include CMakeFiles/sysproj.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/sysproj.dir/flags.make
 
-CMakeFiles/sysproj.dir/answers/diff21.c.o: CMakeFiles/sysproj.dir/flags.make
-CMakeFiles/sysproj.dir/answers/diff21.c.o: ../answers/diff21.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/sysproj.dir/answers/diff21.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/answers/diff21.c.o   -c /Users/jason/sysproj/answers/diff21.c
-
-CMakeFiles/sysproj.dir/answers/diff21.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sysproj.dir/answers/diff21.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jason/sysproj/answers/diff21.c > CMakeFiles/sysproj.dir/answers/diff21.c.i
-
-CMakeFiles/sysproj.dir/answers/diff21.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sysproj.dir/answers/diff21.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jason/sysproj/answers/diff21.c -o CMakeFiles/sysproj.dir/answers/diff21.c.s
-
 CMakeFiles/sysproj.dir/answers/sum.c.o: CMakeFiles/sysproj.dir/flags.make
 CMakeFiles/sysproj.dir/answers/sum.c.o: ../answers/sum.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/sysproj.dir/answers/sum.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/sysproj.dir/answers/sum.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/answers/sum.c.o   -c /Users/jason/sysproj/answers/sum.c
 
 CMakeFiles/sysproj.dir/answers/sum.c.i: cmake_force
@@ -83,22 +70,9 @@ CMakeFiles/sysproj.dir/answers/sum.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sysproj.dir/answers/sum.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jason/sysproj/answers/sum.c -o CMakeFiles/sysproj.dir/answers/sum.c.s
 
-CMakeFiles/sysproj.dir/answers/fib.c.o: CMakeFiles/sysproj.dir/flags.make
-CMakeFiles/sysproj.dir/answers/fib.c.o: ../answers/fib.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/sysproj.dir/answers/fib.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/answers/fib.c.o   -c /Users/jason/sysproj/answers/fib.c
-
-CMakeFiles/sysproj.dir/answers/fib.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sysproj.dir/answers/fib.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jason/sysproj/answers/fib.c > CMakeFiles/sysproj.dir/answers/fib.c.i
-
-CMakeFiles/sysproj.dir/answers/fib.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sysproj.dir/answers/fib.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jason/sysproj/answers/fib.c -o CMakeFiles/sysproj.dir/answers/fib.c.s
-
 CMakeFiles/sysproj.dir/questions/base2.c.o: CMakeFiles/sysproj.dir/flags.make
 CMakeFiles/sysproj.dir/questions/base2.c.o: ../questions/base2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/sysproj.dir/questions/base2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/sysproj.dir/questions/base2.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/questions/base2.c.o   -c /Users/jason/sysproj/questions/base2.c
 
 CMakeFiles/sysproj.dir/questions/base2.c.i: cmake_force
@@ -111,7 +85,7 @@ CMakeFiles/sysproj.dir/questions/base2.c.s: cmake_force
 
 CMakeFiles/sysproj.dir/questions/diff21.c.o: CMakeFiles/sysproj.dir/flags.make
 CMakeFiles/sysproj.dir/questions/diff21.c.o: ../questions/diff21.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/sysproj.dir/questions/diff21.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/sysproj.dir/questions/diff21.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/questions/diff21.c.o   -c /Users/jason/sysproj/questions/diff21.c
 
 CMakeFiles/sysproj.dir/questions/diff21.c.i: cmake_force
@@ -124,7 +98,7 @@ CMakeFiles/sysproj.dir/questions/diff21.c.s: cmake_force
 
 CMakeFiles/sysproj.dir/questions/gcf.c.o: CMakeFiles/sysproj.dir/flags.make
 CMakeFiles/sysproj.dir/questions/gcf.c.o: ../questions/gcf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/sysproj.dir/questions/gcf.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/sysproj.dir/questions/gcf.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/questions/gcf.c.o   -c /Users/jason/sysproj/questions/gcf.c
 
 CMakeFiles/sysproj.dir/questions/gcf.c.i: cmake_force
@@ -137,7 +111,7 @@ CMakeFiles/sysproj.dir/questions/gcf.c.s: cmake_force
 
 CMakeFiles/sysproj.dir/questions/lastDigit.c.o: CMakeFiles/sysproj.dir/flags.make
 CMakeFiles/sysproj.dir/questions/lastDigit.c.o: ../questions/lastDigit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/sysproj.dir/questions/lastDigit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/sysproj.dir/questions/lastDigit.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/questions/lastDigit.c.o   -c /Users/jason/sysproj/questions/lastDigit.c
 
 CMakeFiles/sysproj.dir/questions/lastDigit.c.i: cmake_force
@@ -150,7 +124,7 @@ CMakeFiles/sysproj.dir/questions/lastDigit.c.s: cmake_force
 
 CMakeFiles/sysproj.dir/questions/nearHundred.c.o: CMakeFiles/sysproj.dir/flags.make
 CMakeFiles/sysproj.dir/questions/nearHundred.c.o: ../questions/nearHundred.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/sysproj.dir/questions/nearHundred.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/sysproj.dir/questions/nearHundred.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/questions/nearHundred.c.o   -c /Users/jason/sysproj/questions/nearHundred.c
 
 CMakeFiles/sysproj.dir/questions/nearHundred.c.i: cmake_force
@@ -161,22 +135,9 @@ CMakeFiles/sysproj.dir/questions/nearHundred.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sysproj.dir/questions/nearHundred.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jason/sysproj/questions/nearHundred.c -o CMakeFiles/sysproj.dir/questions/nearHundred.c.s
 
-CMakeFiles/sysproj.dir/questions/stub.c.o: CMakeFiles/sysproj.dir/flags.make
-CMakeFiles/sysproj.dir/questions/stub.c.o: ../questions/stub.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/sysproj.dir/questions/stub.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/questions/stub.c.o   -c /Users/jason/sysproj/questions/stub.c
-
-CMakeFiles/sysproj.dir/questions/stub.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sysproj.dir/questions/stub.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jason/sysproj/questions/stub.c > CMakeFiles/sysproj.dir/questions/stub.c.i
-
-CMakeFiles/sysproj.dir/questions/stub.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sysproj.dir/questions/stub.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jason/sysproj/questions/stub.c -o CMakeFiles/sysproj.dir/questions/stub.c.s
-
 CMakeFiles/sysproj.dir/bat.c.o: CMakeFiles/sysproj.dir/flags.make
 CMakeFiles/sysproj.dir/bat.c.o: ../bat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/sysproj.dir/bat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/sysproj.dir/bat.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/bat.c.o   -c /Users/jason/sysproj/bat.c
 
 CMakeFiles/sysproj.dir/bat.c.i: cmake_force
@@ -189,7 +150,7 @@ CMakeFiles/sysproj.dir/bat.c.s: cmake_force
 
 CMakeFiles/sysproj.dir/server.c.o: CMakeFiles/sysproj.dir/flags.make
 CMakeFiles/sysproj.dir/server.c.o: ../server.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/sysproj.dir/server.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/sysproj.dir/server.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/server.c.o   -c /Users/jason/sysproj/server.c
 
 CMakeFiles/sysproj.dir/server.c.i: cmake_force
@@ -202,7 +163,7 @@ CMakeFiles/sysproj.dir/server.c.s: cmake_force
 
 CMakeFiles/sysproj.dir/user.c.o: CMakeFiles/sysproj.dir/flags.make
 CMakeFiles/sysproj.dir/user.c.o: ../user.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/sysproj.dir/user.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/sysproj.dir/user.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/user.c.o   -c /Users/jason/sysproj/user.c
 
 CMakeFiles/sysproj.dir/user.c.i: cmake_force
@@ -215,7 +176,7 @@ CMakeFiles/sysproj.dir/user.c.s: cmake_force
 
 CMakeFiles/sysproj.dir/temp/1234/sum.c.o: CMakeFiles/sysproj.dir/flags.make
 CMakeFiles/sysproj.dir/temp/1234/sum.c.o: ../temp/1234/sum.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/sysproj.dir/temp/1234/sum.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/sysproj.dir/temp/1234/sum.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/temp/1234/sum.c.o   -c /Users/jason/sysproj/temp/1234/sum.c
 
 CMakeFiles/sysproj.dir/temp/1234/sum.c.i: cmake_force
@@ -228,7 +189,7 @@ CMakeFiles/sysproj.dir/temp/1234/sum.c.s: cmake_force
 
 CMakeFiles/sysproj.dir/questions/sum.c.o: CMakeFiles/sysproj.dir/flags.make
 CMakeFiles/sysproj.dir/questions/sum.c.o: ../questions/sum.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/sysproj.dir/questions/sum.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/sysproj.dir/questions/sum.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sysproj.dir/questions/sum.c.o   -c /Users/jason/sysproj/questions/sum.c
 
 CMakeFiles/sysproj.dir/questions/sum.c.i: cmake_force
@@ -241,15 +202,12 @@ CMakeFiles/sysproj.dir/questions/sum.c.s: cmake_force
 
 # Object files for target sysproj
 sysproj_OBJECTS = \
-"CMakeFiles/sysproj.dir/answers/diff21.c.o" \
 "CMakeFiles/sysproj.dir/answers/sum.c.o" \
-"CMakeFiles/sysproj.dir/answers/fib.c.o" \
 "CMakeFiles/sysproj.dir/questions/base2.c.o" \
 "CMakeFiles/sysproj.dir/questions/diff21.c.o" \
 "CMakeFiles/sysproj.dir/questions/gcf.c.o" \
 "CMakeFiles/sysproj.dir/questions/lastDigit.c.o" \
 "CMakeFiles/sysproj.dir/questions/nearHundred.c.o" \
-"CMakeFiles/sysproj.dir/questions/stub.c.o" \
 "CMakeFiles/sysproj.dir/bat.c.o" \
 "CMakeFiles/sysproj.dir/server.c.o" \
 "CMakeFiles/sysproj.dir/user.c.o" \
@@ -259,15 +217,12 @@ sysproj_OBJECTS = \
 # External object files for target sysproj
 sysproj_EXTERNAL_OBJECTS =
 
-sysproj: CMakeFiles/sysproj.dir/answers/diff21.c.o
 sysproj: CMakeFiles/sysproj.dir/answers/sum.c.o
-sysproj: CMakeFiles/sysproj.dir/answers/fib.c.o
 sysproj: CMakeFiles/sysproj.dir/questions/base2.c.o
 sysproj: CMakeFiles/sysproj.dir/questions/diff21.c.o
 sysproj: CMakeFiles/sysproj.dir/questions/gcf.c.o
 sysproj: CMakeFiles/sysproj.dir/questions/lastDigit.c.o
 sysproj: CMakeFiles/sysproj.dir/questions/nearHundred.c.o
-sysproj: CMakeFiles/sysproj.dir/questions/stub.c.o
 sysproj: CMakeFiles/sysproj.dir/bat.c.o
 sysproj: CMakeFiles/sysproj.dir/server.c.o
 sysproj: CMakeFiles/sysproj.dir/user.c.o
@@ -275,7 +230,7 @@ sysproj: CMakeFiles/sysproj.dir/temp/1234/sum.c.o
 sysproj: CMakeFiles/sysproj.dir/questions/sum.c.o
 sysproj: CMakeFiles/sysproj.dir/build.make
 sysproj: CMakeFiles/sysproj.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C executable sysproj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jason/sysproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable sysproj"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sysproj.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,5 +1,5 @@
 #include "answers.h"
-#import "../temp/1234/sum.c"
+#import "../temp/????/sum.c"
 
 int passed = 0;
 int tested = 0;
@@ -26,7 +26,7 @@ int main(){
   test(-1,-2,-3);
   test(12,22,34);
   printf("%d/%d CASES PASSED\n",passed,tested);
-  return 1;
+  exit(passed)
 }
 
 

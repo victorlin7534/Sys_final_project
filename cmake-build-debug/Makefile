@@ -123,60 +123,6 @@ sysproj/fast:
 	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/build
 .PHONY : sysproj/fast
 
-answers/diff21.o: answers/diff21.c.o
-
-.PHONY : answers/diff21.o
-
-# target to build an object file
-answers/diff21.c.o:
-	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/answers/diff21.c.o
-.PHONY : answers/diff21.c.o
-
-answers/diff21.i: answers/diff21.c.i
-
-.PHONY : answers/diff21.i
-
-# target to preprocess a source file
-answers/diff21.c.i:
-	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/answers/diff21.c.i
-.PHONY : answers/diff21.c.i
-
-answers/diff21.s: answers/diff21.c.s
-
-.PHONY : answers/diff21.s
-
-# target to generate assembly for a file
-answers/diff21.c.s:
-	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/answers/diff21.c.s
-.PHONY : answers/diff21.c.s
-
-answers/fib.o: answers/fib.c.o
-
-.PHONY : answers/fib.o
-
-# target to build an object file
-answers/fib.c.o:
-	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/answers/fib.c.o
-.PHONY : answers/fib.c.o
-
-answers/fib.i: answers/fib.c.i
-
-.PHONY : answers/fib.i
-
-# target to preprocess a source file
-answers/fib.c.i:
-	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/answers/fib.c.i
-.PHONY : answers/fib.c.i
-
-answers/fib.s: answers/fib.c.s
-
-.PHONY : answers/fib.s
-
-# target to generate assembly for a file
-answers/fib.c.s:
-	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/answers/fib.c.s
-.PHONY : answers/fib.c.s
-
 answers/sum.o: answers/sum.c.o
 
 .PHONY : answers/sum.o
@@ -366,33 +312,6 @@ questions/nearHundred.c.s:
 	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/questions/nearHundred.c.s
 .PHONY : questions/nearHundred.c.s
 
-questions/stub.o: questions/stub.c.o
-
-.PHONY : questions/stub.o
-
-# target to build an object file
-questions/stub.c.o:
-	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/questions/stub.c.o
-.PHONY : questions/stub.c.o
-
-questions/stub.i: questions/stub.c.i
-
-.PHONY : questions/stub.i
-
-# target to preprocess a source file
-questions/stub.c.i:
-	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/questions/stub.c.i
-.PHONY : questions/stub.c.i
-
-questions/stub.s: questions/stub.c.s
-
-.PHONY : questions/stub.s
-
-# target to generate assembly for a file
-questions/stub.c.s:
-	$(MAKE) -f CMakeFiles/sysproj.dir/build.make CMakeFiles/sysproj.dir/questions/stub.c.s
-.PHONY : questions/stub.c.s
-
 questions/sum.o: questions/sum.c.o
 
 .PHONY : questions/sum.o
@@ -510,12 +429,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... sysproj"
-	@echo "... answers/diff21.o"
-	@echo "... answers/diff21.i"
-	@echo "... answers/diff21.s"
-	@echo "... answers/fib.o"
-	@echo "... answers/fib.i"
-	@echo "... answers/fib.s"
 	@echo "... answers/sum.o"
 	@echo "... answers/sum.i"
 	@echo "... answers/sum.s"
@@ -537,9 +450,6 @@ help:
 	@echo "... questions/nearHundred.o"
 	@echo "... questions/nearHundred.i"
 	@echo "... questions/nearHundred.s"
-	@echo "... questions/stub.o"
-	@echo "... questions/stub.i"
-	@echo "... questions/stub.s"
 	@echo "... questions/sum.o"
 	@echo "... questions/sum.i"
 	@echo "... questions/sum.s"

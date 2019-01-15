@@ -83,12 +83,6 @@
 		<Unit filename="/Users/jason/sysproj/answers/answers.h">
 			<Option target="sysproj"/>
 		</Unit>
-		<Unit filename="/Users/jason/sysproj/answers/diff21.c">
-			<Option target="sysproj"/>
-		</Unit>
-		<Unit filename="/Users/jason/sysproj/answers/fib.c">
-			<Option target="sysproj"/>
-		</Unit>
 		<Unit filename="/Users/jason/sysproj/answers/sum.c">
 			<Option target="sysproj"/>
 		</Unit>
@@ -111,9 +105,6 @@
 			<Option target="sysproj"/>
 		</Unit>
 		<Unit filename="/Users/jason/sysproj/questions/nearHundred.c">
-			<Option target="sysproj"/>
-		</Unit>
-		<Unit filename="/Users/jason/sysproj/questions/stub.c">
 			<Option target="sysproj"/>
 		</Unit>
 		<Unit filename="/Users/jason/sysproj/questions/sum.c">
