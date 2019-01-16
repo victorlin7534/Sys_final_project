@@ -1,34 +1,39 @@
 #include "bat.h"
 
 void subserver(int client_socket) {
-  char buffer[BUFFER_SIZE];
-  char *dummy;
-  char pid[50];
+  char buffer[BUFFER_SIZE], *dummy, pid[50];
   sprintf(pid,"%d",getpid());
-  char loc[128] = strcat("/temp/",pid);
-  execlp("mkdir",loc);
+  char loc[128]; strcat(loc,"/temp/"); strcat(loc,pid);
+  int status;
+  
+  if(!fork()) execlp("mkdir",loc,NULL);
+  else wait(&status);
   
   while (read(client_socket, buffer, sizeof(buffer))) {
-    char q[50] = question_names[strtol(buffer,&dummy,10)];
-
-    int temp = open(strcat("/questions/",q),O_RDWR);
+    char q[50];
+    strcat(q,"/questions/");
+    strcpy(q,question_names[strtol(buffer,&dummy,10)]);
+    
+    int temp = open(q,O_RDWR);
     read(temp,buffer,sizeof(buffer));
     write(client_socket, buffer, sizeof(buffer));
     close(temp);
 
     read(client_socket, buffer, sizeof(buffer));
-    temp = open(strcat(loc,q),O_CREAT|O_WRONLY,0644);
+    strcat(loc,q);
+    temp = open(loc,O_CREAT|O_WRONLY,0644);
     write(temp,buffer,sizeof(buffer));
     close(temp);
 
-    //testing
-
-    if(/*success*/) strcpy(buffer,"SUCCESS");
-    else strcpy(buffer,"FAILED");
+    //test
+    
+    //if(/*success*/) strcpy(buffer,"SUCCESS");
+    //else strcpy(buffer,"FAILED");
     write(client_socket,buffer,sizeof(buffer));
   }
   close(client_socket);
-  execlp("rm","-rf",strcat("/temp/",pid));
+  if(!fork()) execlp("rm","-rf",strcat("/temp/",pid),NULL);
+  else wait(&status);
   exit(0);
 }
 

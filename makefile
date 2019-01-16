@@ -1,7 +1,7 @@
-server: server.o
-	gcc -o server server.o
-user: user.o 
-	gcc -o user user.o
+server: server.o bat.o
+	gcc -o server server.o bat.o
+user: user.o bat.o
+	gcc -o user user.o bat.o
 server.o: server.c bat.h
 	gcc -c server.c
 user.o: user.c bat.h
