@@ -1,7 +1,6 @@
 # Neo-Coding Bat
 
-## Jason Tung, Larry Wong, Victor Lin
-## Period 5
+## Jason Tung, Larry Wong, Victor Lin   Period 5
 
 #### This project is a more simplified emulation of codingbat. It will feature a server to client connection in which the user receives problems from the server. The user then codes the solution in a text editor; this solution is sent back to the server for evaluation. The server then tells the user whether he/she succeeded.
 
