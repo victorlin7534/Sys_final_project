@@ -22,6 +22,4 @@ int server_setup();
 int server_connect(int sd);
 int client_setup(char * server);
 
-char *question_names[6] = {"base2.c","diff21.c","gcf.c","lastDigit.c","nearHundred.c","sum.c"};//names of the files in /questions
-
 #endif

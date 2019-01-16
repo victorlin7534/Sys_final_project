@@ -1,11 +1,15 @@
 #include "bat.h"
 
+char *question_names[6] = {"base2.c","diff21.c","gcf.c","lastDigit.c","nearHundred.c","sum.c"};
+
 void subserver(int client_socket) {
   char buffer[BUFFER_SIZE], *dummy, pid[50];
   sprintf(pid,"%d",getpid());
   char loc[128]; strcat(loc,"/temp/"); strcat(loc,pid);
   int status;
   
+  // print server ip so user can connect to it
+
   if(!fork()) execlp("mkdir",loc,NULL);
   else wait(&status);
   
@@ -14,6 +18,8 @@ void subserver(int client_socket) {
     strcat(q,"/questions/");
     strcpy(q,question_names[strtol(buffer,&dummy,10)]);
     
+    // copy and remove driver file to be tested from answers to temp folder
+
     int temp = open(q,O_RDWR);
     read(temp,buffer,sizeof(buffer));
     write(client_socket, buffer, sizeof(buffer));
