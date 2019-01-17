@@ -2,6 +2,13 @@
 
 char *question_names[6] = {"base2.c","diff21.c","gcf.c","lastDigit.c","nearHundred.c","sum.c"};
 
+void sighand(int sig){
+
+  if (sig == SIGINT){
+    if (!fork()) execlp("rm","rm","-rf","temp",NULL);
+    exit(0);
+  }
+}
 void subserver(int client_socket) {
   char buffer[BUFFER_SIZE], *dummy, pid[50];
   sprintf(pid,"%d",getpid());
@@ -47,7 +54,9 @@ void subserver(int client_socket) {
     write(client_socket,buffer,sizeof(buffer));
   }
   close(client_socket);
-  if(!fork()) execlp("rm","-rf",strcat("temp/",pid),NULL);
+  char path[50] = "temp/";
+  strcat(path,pid);
+  if(!fork()) execlp("rm","rm","-rf",path,NULL);
   else wait(&status);
   exit(0);
 }
@@ -76,6 +85,7 @@ void get_ip(){
 }
 
 int main() {
+  signal(SIGINT,sighand);
   int status;
   if(!fork()) execlp("/bin/mkdir","mkdir","temp",NULL);
   else wait(&status);

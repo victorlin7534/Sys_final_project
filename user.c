@@ -1,5 +1,6 @@
 #include "bat.h"
 
+
 int main(int argc, char **argv) {
   int server_socket;
   if (argc == 2) server_socket = client_setup( argv[1]);
@@ -12,7 +13,7 @@ int main(int argc, char **argv) {
   sprintf(state,"%d",stage);
   write(server_socket,state,sizeof(state));//ask server for first prompt
 
-  while (1){
+  while (stage < 6){
     read(server_socket, buffer, sizeof(buffer));
 
     //put prompt into file for user
