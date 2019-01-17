@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#import "drivers/sum.c"
+#include "drivers/sum.c"
 
 int passed = 0;
 int tested = 0;
@@ -30,6 +30,15 @@ int main(){
   test(12,22,34);
   printf("%d/%d CASES PASSED\n",passed,tested);
   exit(passed)
+
+    
+  int fileint = open("output", O_CREAT | O_RDWR | O_TRUNC, S_IWUSR | S_IXUSR | S_IRUSR);
+  char * passstr = malloc(999);
+  sprintf(passstr, "%d", passed);
+  write(fileint, passstr, 999);
+  close(fileint);
+  return 1;
+
 }
 
 

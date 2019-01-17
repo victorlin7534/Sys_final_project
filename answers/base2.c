@@ -1,8 +1,9 @@
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#import "drivers/base2.c"
+#include "drivers/base2.c"
 
 int passed = 0;
 int tested = 0;
@@ -29,7 +30,16 @@ int main(){
   test(99,1100011);
   test(64,1000000);
   printf("%d/%d CASES PASSED\n",passed,tested);
+
+  
+  int fileint = open("output", O_CREAT | O_RDWR | O_TRUNC, S_IWUSR | S_IXUSR | S_IRUSR);
+  char * passstr = malloc(999);
+  sprintf(passstr, "%d", passed);
+  write(fileint, passstr, 999);
+  close(fileint);
   return 1;
+
+  
 }
 
 
