@@ -6,9 +6,10 @@ int main(int argc, char **argv) {
   else server_socket = client_setup( DEFAULT_IP );
   char buffer[BUFFER_SIZE];
   int status;
+  int stage = 0;
 
   char state[8];
-  sprintf(state,"%d",rand()%6);
+  sprintf(state,"%d",stage);
   write(server_socket,state,sizeof(state));//ask server for first prompt
 
   while (1){
@@ -31,7 +32,8 @@ int main(int argc, char **argv) {
     read(server_socket, buffer, sizeof(buffer));
     //check if user input was correct
     if(strcmp(buffer,"SUCCESS")==0){
-      sprintf(state,"%d",rand()%6);
+      stage++;
+      sprintf(state,"%d",stage);
       write(server_socket,state,sizeof(state));//send new number/prompt
     }
   }

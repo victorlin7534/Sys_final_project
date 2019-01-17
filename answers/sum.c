@@ -1,4 +1,7 @@
-#include "answers.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 #import "drivers/sum.c"
 
 int passed = 0;
