@@ -21,11 +21,12 @@ void subserver(int client_socket) {
   strcat(loc,"/drivers");
   if(!fork()) execlp("/bin/mkdir","mkdir",loc,NULL);
   else wait(&status);
-
+  
   while (read(client_socket, buffer, sizeof(buffer))) {
+    char * question = question_names[strtol(buffer,&dummy,10)];
     char q[50];
     strcat(q,"questions/");
-    strcat(q,question_names[strtol(buffer,&dummy,10)]);
+    strcat(q,question);
     
     int temp = open(q,O_RDWR);
     read(temp,buffer,sizeof(buffer));
@@ -33,7 +34,7 @@ void subserver(int client_socket) {
     close(temp);
 
     read(client_socket, buffer, sizeof(buffer));
-    strcat(loc,question_names[strtol(buffer,&dummy,10)]);
+    strcat(loc,question);
     temp = open(loc,O_CREAT|O_WRONLY,0644);
     write(temp,buffer,sizeof(buffer));
     close(temp);
@@ -41,10 +42,13 @@ void subserver(int client_socket) {
     char r[50];
     strcat(r,"answers/");
     char newloc[50]; strcat(newloc,"temp/"); strcat(newloc,pid);
-    strcat(r,question_names[strtol(buffer,&dummy,10)]);
+    strcat(r,question);
     if(!fork()) execlp("/bin/cp","cp",r,newloc,NULL);
     else wait(&status);
 
+    if(!fork()) execlp("gcc","gcc",question,NULL);
+    if(!fork()) execlp("./a.out", "./a.out", NULL);
+    
     //test
     
     //if(/*success*/) strcpy(buffer,"SUCCESS");
