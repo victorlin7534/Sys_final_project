@@ -1,7 +1,9 @@
 #include "bat.h"
 
 int main(int argc, char **argv) {
-  int server_socket = client_setup(argv[1]);
+  int server_socket;
+  if (argc == 2) server_socket = client_setup( argv[1]);
+  else server_socket = client_setup( DEFAULT_IP );
   char buffer[BUFFER_SIZE];
   int status;
 

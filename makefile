@@ -10,4 +10,4 @@ user.o: user.c bat.h
 bat.o: bat.c bat.h
 	gcc -c bat.c
 clean:
-	rm -f *o *~ run*
+	rm -f *o *~ user server

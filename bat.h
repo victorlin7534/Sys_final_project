@@ -10,12 +10,16 @@
 #include <string.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <ifaddrs.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
 #ifndef BAT_H
 #define BAT_H
 
 #define BUFFER_SIZE 8192
 #define PORT "9001"
+#define DEFAULT_IP "127.0.0.1"
 
 void error_check(int i, char *s);
 int server_setup();

@@ -7,8 +7,6 @@ void subserver(int client_socket) {
   sprintf(pid,"%d",getpid());
   char loc[128]; strcat(loc,"/temp/"); strcat(loc,pid);
   int status;
-  
-  // print server ip so user can connect to it
 
   if(!fork()) execlp("mkdir",loc,NULL);
   else wait(&status);
@@ -43,8 +41,32 @@ void subserver(int client_socket) {
   exit(0);
 }
 
+void get_ip(char* addrp){
+  struct ifaddrs *iflist,*iface;
+  if(getifaddrs(&iflist)<0){
+    perror("getifaddrs");
+    return;
+  }
+  for(iface=iflist;iface;iface=iface->ifa_next){
+    int af = iface->ifa_addr->sa_family;
+    const void *addr;
+    if(af == AF_INET) addr = &((struct sockaddr_in *)iface->ifa_addr)->sin_addr;
+    else addr = NULL;
+    if(addr){
+      if(inet_ntop(af,addr,addrp,sizeof(addrp))==NULL){
+	perror("inet_ntop");
+	continue;
+      }
+    }
+  }
+  freeifaddrs(iflist);
+}
+
 int main() {
   int listen_socket = server_setup();
+  char ip[INET6_ADDRSTRLEN];
+  get_ip(ip);
+  printf("%s",ip);
   while (1){
     int client_socket = server_connect(listen_socket);
     if (fork()) close(client_socket);
