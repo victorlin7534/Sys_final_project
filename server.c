@@ -3,7 +3,6 @@
 char *question_names[6] = {"base2.c","diff21.c","gcf.c","lastDigit.c","nearHundred.c","sum.c"};
 
 void sighand(int sig){
-
   if (sig == SIGINT){
     if (!fork()) execlp("rm","rm","-rf","temp",NULL);
     exit(0);
@@ -47,14 +46,11 @@ void subserver(int client_socket) {
     else wait(&status);
 
     if(!fork()) execlp("gcc","gcc",question,NULL);
+    else wait(&status);
     if(!fork()) execlp("./a.out", "./a.out", NULL);
-    
-    //test
-    
-    //if(/*success*/) strcpy(buffer,"SUCCESS");
-    //else strcpy(buffer,"FAILED");
+    else wait(&status);
+	  
     remove(loc);
-
     write(client_socket,buffer,sizeof(buffer));
   }
   close(client_socket);
@@ -101,9 +97,3 @@ int main() {
     else subserver(client_socket);
   }
 }
-
-// remove temp when exiting
-// remove user ip from temp after user exits
-// print server ip
-// do testing
-// delete copy.c
