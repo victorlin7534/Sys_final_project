@@ -9,7 +9,7 @@ void sighand(int sig){
   }
 }
 void subserver(int client_socket) {
-  char buffer[BUFFER_SIZE], *dummy, pid[50];
+  char buffer[BUFFER_SIZE], pid[50];
   sprintf(pid,"%d",getpid());
   char loc[128]; strcat(loc,"temp/"); strcat(loc,pid);
   int status;
@@ -22,12 +22,12 @@ void subserver(int client_socket) {
   else wait(&status);
   
   while (read(client_socket, buffer, sizeof(buffer))) {
-    char * question = question_names[strtol(buffer,&dummy,10)];
-    char q[50];
-    strcat(q,"questions/");
+    char question[25];
+    strcpy(question,question_names[atoi(buffer)]);
+    char q[50] = "questions/";
     strcat(q,question);
     
-    int temp = open(q,O_RDWR);
+    int temp = open(q,O_RDONLY);
     read(temp,buffer,sizeof(buffer));
     write(client_socket, buffer, sizeof(buffer));
     close(temp);
@@ -40,7 +40,7 @@ void subserver(int client_socket) {
 
     char r[50];
     strcat(r,"answers/");
-    char newloc[50]; strcat(newloc,"temp/"); strcat(newloc,pid);
+    char newloc[50] = "temp/"; strcat(newloc,pid);
     strcat(r,question);
     if(!fork()) execlp("/bin/cp","cp",r,newloc,NULL);
     else wait(&status);
@@ -49,9 +49,11 @@ void subserver(int client_socket) {
     else wait(&status);
     if(!fork()) execlp("./a.out", "./a.out", NULL);
     else wait(&status);
-	  
-    remove(loc);
+
+    temp = open("output",O_RDONLY);
+    read(temp,buffer,sizeof(buffer));
     write(client_socket,buffer,sizeof(buffer));
+    remove(loc);
   }
   close(client_socket);
   char path[50] = "temp/";

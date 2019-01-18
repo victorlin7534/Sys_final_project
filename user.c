@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
 
     read(server_socket, buffer, sizeof(buffer));
     //check if user input was correct
-    if(strcmp(buffer,"SUCCESS")==0){
+    if(strcmp(buffer,"5")==0){
       stage++;
       sprintf(state,"%d",stage);
       write(server_socket,state,sizeof(state));//send new number/prompt
