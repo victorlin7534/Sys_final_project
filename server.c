@@ -1,6 +1,6 @@
 #include "bat.h"
 
-char *question_names[6] = {"base2.c","diff21.c","gcf.c","lastDigit.c","nearHundred.c","sum.c"};
+char *question_names[6] = {"sum.c","base2.c","diff21.c","gcf.c","lastDigit.c","nearHundred.c"};
 
 void sighand(int sig){
   if (sig == SIGINT){
