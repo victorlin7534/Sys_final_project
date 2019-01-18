@@ -53,6 +53,7 @@ void subserver(int client_socket) {
     temp = open("output",O_RDONLY);
     read(temp,buffer,sizeof(buffer));
     write(client_socket,buffer,sizeof(buffer));
+    close(temp);
     remove(loc);
   }
   close(client_socket);

@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
     if(strcmp(buffer,"5")==0){
       stage++;
       sprintf(state,"%d",stage);
-      write(server_socket,state,sizeof(state));//send new number/prompt
+      write(server_socket,state,strlen(state));//send new number/prompt
     }
   }
 }
