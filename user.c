@@ -11,14 +11,14 @@ int main(int argc, char **argv) {
 
   char state[8];
   sprintf(state,"%d",stage);
-  write(server_socket,state,sizeof(state));//ask server for first prompt
+  write(server_socket,state,strlen(state));//ask server for first prompt
 
   while (stage < 6){
     read(server_socket, buffer, sizeof(buffer));
 
     //put prompt into file for user
     int temp = open("temp.c",O_CREAT|O_WRONLY,0644);
-    write(temp,buffer,sizeof(buffer));
+    write(temp,buffer,strlen(buffer));
     if(!fork()) execlp("emacs","emacs","temp.c",NULL);
     else wait(&status);
     close(temp);
@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
     //send user's work to server
     temp = open("temp.c",O_RDWR);
     read(temp,buffer,sizeof(buffer));
-    write(server_socket,buffer,sizeof(buffer));
+    write(server_socket,buffer,strlen(buffer));
     close(temp);
     remove("temp.c");
 
