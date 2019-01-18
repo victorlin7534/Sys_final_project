@@ -17,7 +17,7 @@ void subserver(int client_socket) {
   if(!fork()) execlp("/bin/mkdir","mkdir",loc,NULL);
   else wait(&status);
   
-  strcat(loc,"/drivers");
+  strcat(loc,"/drivers/");
   if(!fork()) execlp("/bin/mkdir","mkdir",loc,NULL);
   else wait(&status);
   
@@ -29,13 +29,14 @@ void subserver(int client_socket) {
     
     int temp = open(q,O_RDONLY);
     read(temp,buffer,sizeof(buffer));
-    write(client_socket, buffer, sizeof(buffer));
+    write(client_socket, buffer, strlen(buffer));
     close(temp);
 
     read(client_socket, buffer, sizeof(buffer));
     strcat(loc,question);
     temp = open(loc,O_CREAT|O_WRONLY,0644);
-    write(temp,buffer,sizeof(buffer));
+    write(temp,buffer,strlen(buffer));
+    printf("%s",buffer);
     close(temp);
 
     char r[50];
@@ -45,22 +46,31 @@ void subserver(int client_socket) {
     if(!fork()) execlp("/bin/cp","cp",r,newloc,NULL);
     else wait(&status);
 
+    chdir(newloc);
+    
     if(!fork()) execlp("gcc","gcc",question,NULL);
     else wait(&status);
     if(!fork()) execlp("./a.out", "./a.out", NULL);
     else wait(&status);
 
+    printf("gt");
+    chdir("../");
+
     temp = open("output",O_RDONLY);
-    read(temp,buffer,sizeof(buffer));
-    write(client_socket,buffer,sizeof(buffer));
+    char buffer2[1];
+    read(temp,buffer2,1);
+    printf("%s",buffer2);
+    write(client_socket,buffer2,strlen(buffer2));
     close(temp);
-    remove(loc);
+
+    chdir("../");
+
   }
   close(client_socket);
   char path[50] = "temp/";
   strcat(path,pid);
   if(!fork()) execlp("rm","rm","-rf",path,NULL);
-  else wait(&status);
+  else wait(NULL);
   exit(0);
 }
 

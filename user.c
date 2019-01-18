@@ -31,6 +31,7 @@ int main(int argc, char **argv) {
     remove("temp.c");
 
     read(server_socket, buffer, sizeof(buffer));
+    printf("%s",buffer);
     //check if user input was correct
     if(strcmp(buffer,"5")==0){
       stage++;
