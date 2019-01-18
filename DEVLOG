@@ -17,8 +17,10 @@ Date - Work
 
 1/14/19 - Fixing server bugs and question drivers
 
-1/15/19 - Fixing server bugs, redesigned server functionality, and added file copying system
+1/16/19 - Fixing server bugs, redesigned server functionality, and added file copying system
 
-1/15/19 - Updated README doc
+1/16/19 - Updated README doc
+
+1/17/18 - Fixed server and client connectivity, server deletes user file once user disconnects, added signal handling
 
 
