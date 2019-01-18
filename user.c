@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
     //put prompt into file for user
     int temp = open("temp.c",O_CREAT|O_WRONLY,0644);
     write(temp,buffer,sizeof(buffer));
-    if(!fork()) execlp("emacs","temp.c",NULL);
+    if(!fork()) execlp("emacs","emacs","temp.c",NULL);
     else wait(&status);
     close(temp);
 
