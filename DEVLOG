@@ -21,6 +21,6 @@ Date - Work
 
 1/16/19 - Updated README doc
 
-1/17/18 - Fixed server and client connectivity, server deletes user file once user disconnects, added signal handling
+1/17/18 - Fixed server and client connectivity, server deletes user file once user disconnects, added signal handling, and worked on file transfer.
 
 
