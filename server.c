@@ -32,11 +32,15 @@ void subserver(int client_socket) {
     write(client_socket, buffer, strlen(buffer));
     close(temp);
 
+    memset(buffer,0,sizeof(buffer));
+
     read(client_socket, buffer, sizeof(buffer));
     strcat(loc,question);
     temp = open(loc,O_CREAT|O_WRONLY,0644);
     write(temp,buffer,strlen(buffer));
     close(temp);
+    
+    memset(buffer,0,sizeof(buffer));	   
 
     char r[50];
     strcat(r,"answers/");
@@ -57,6 +61,8 @@ void subserver(int client_socket) {
     write(client_socket,buffer,strlen(buffer));
     close(temp);
 
+    memset(buffer,0,sizeof(buffer));
+
     chdir("../../");
   }
   close(client_socket);
@@ -69,7 +75,7 @@ void subserver(int client_socket) {
 
 void get_ip(){
   struct ifaddrs *iflist,*iface;
-      char addrp[INET6_ADDRSTRLEN];
+  char addrp[INET6_ADDRSTRLEN];
   if(getifaddrs(&iflist)<0){
     perror("getifaddrs");
     return;
@@ -81,8 +87,8 @@ void get_ip(){
     else addr = NULL;
     if(addr){
       if(inet_ntop(af,addr,addrp,128)==NULL){
-		perror("inet_ntop");
-		continue;
+	perror("inet_ntop");
+	continue;
       }
     }
   }

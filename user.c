@@ -1,7 +1,7 @@
 #include "bat.h"
 
 int main(int argc, char **argv) {
-  char buffer[BUFFER_SIZE], state[1];
+  char buffer[BUFFER_SIZE], state[2];
   int server_socket, stage = 0;
   if (argc == 2) server_socket = client_setup( argv[1]);
   else server_socket = client_setup( DEFAULT_IP );
@@ -19,6 +19,9 @@ int main(int argc, char **argv) {
     else wait(0);
     close(temp);
 
+    memset(buffer,0,sizeof(buffer));
+
+
     //send user's work to server
     temp = open("temp.c",O_RDWR);
     read(temp,buffer,sizeof(buffer));
@@ -26,9 +29,14 @@ int main(int argc, char **argv) {
     close(temp);
     remove("temp.c");
 
+    memset(buffer,0,sizeof(buffer));
+
     //check if user input was correct
     read(server_socket, buffer, 1);
     if(buffer[0]=='5'){printf("SUCCESS\n"); stage++;}
     else printf("FAILED\n");
+
+    memset(buffer,0,sizeof(buffer));
+
   }
 }
