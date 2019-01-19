@@ -21,7 +21,6 @@ int main(int argc, char **argv) {
 
     memset(buffer,0,sizeof(buffer));
 
-
     //send user's work to server
     temp = open("temp.c",O_RDWR);
     read(temp,buffer,sizeof(buffer));
@@ -33,12 +32,10 @@ int main(int argc, char **argv) {
 
     //check if user input was correct
     read(server_socket, buffer, 1);
-    printf("%s\n",buffer);
-    if(buffer[0]=='5'){printf("SUCCESS\nNEXT TASK"); stage++;}
-    else printf("FAILED\nDO IT AGAIN!!");
+    if(buffer[0]=='5'){printf("SUCCESS\nNEXT TASK\n"); stage++;}
+    else printf("FAILED\nDO IT AGAIN!!\n");
 
     memset(buffer,0,sizeof(buffer));
-
   }
   printf("You are a master coder now!\n");
 }
