@@ -32,3 +32,5 @@ Date - Work
 1/18/19 - Fixed "forever idle" server after first user input (Victor Lin, Larry Wong)
 
 1/18/19 - Fixed error where the user suceeds no matter what they submit (Victor Lin)
+
+1/18/19 - Added print statements to indicate progress (Larry Wong)
