@@ -1,6 +1,6 @@
 #include "bat.h"
 
-char *question_names[6] = {"sum.c","base2.c","diff21.c","gcf.c","lastDigit.c","nearHundred.c"};
+char *question_names[6] = {"sum.c","diff21.c","gcf.c","lastDigit.c","nearHundred.c","base2.c"};
 
 void sighand(int sig){
   if (sig == SIGINT){
@@ -20,6 +20,8 @@ void subserver(int client_socket) {
   strcat(loc,"/drivers/");
   if(!fork()) execlp("/bin/mkdir","mkdir",loc,NULL);
   else wait(0);
+
+  memset(loc,0,sizeof(loc));
   
   while(read(client_socket, buffer,1)) {
     char question[25];
@@ -34,11 +36,12 @@ void subserver(int client_socket) {
 
     memset(buffer,0,sizeof(buffer));
 
+    strcat(loc,"temp/");strcat(loc,pid);strcat(loc,"/drivers/");strcat(loc,question);
     read(client_socket, buffer, sizeof(buffer));
-    strcat(loc,question);
     temp = open(loc,O_CREAT|O_WRONLY,0644);
     write(temp,buffer,strlen(buffer));
     close(temp);
+    memset(loc,0,sizeof(loc));
     
     memset(buffer,0,sizeof(buffer));	   
 
@@ -48,6 +51,7 @@ void subserver(int client_socket) {
     strcat(r,question);
     if(!fork()) execlp("/bin/cp","cp",r,newloc,NULL);
     else wait(0);
+    memset(r,0,sizeof(r));
 
     chdir(newloc);
     

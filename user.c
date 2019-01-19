@@ -33,6 +33,7 @@ int main(int argc, char **argv) {
 
     //check if user input was correct
     read(server_socket, buffer, 1);
+    printf("%s\n",buffer);
     if(buffer[0]=='5'){printf("SUCCESS\n"); stage++;}
     else printf("FAILED\n");
 

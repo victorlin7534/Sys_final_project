@@ -4,6 +4,6 @@
 
 /* Given two numbers, find the greatest common factor*/
 
-int gcd(int a, int b){
+int gcf(int a, int b){
 
 }
