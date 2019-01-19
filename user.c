@@ -1,6 +1,16 @@
 #include "bat.h"
 
+void sighand(int sig){
+  if (sig == SIGINT){
+    printf("Wow... giving up already?\n What a disappointment\n");
+    if(!fork()) execlp("rm","rm","-rf","temp.c",NULL);
+    else wait(0);
+    printf("Finished cleaning up the mess you made.\n");
+    exit(0);
+  }
+}
 int main(int argc, char **argv) {
+  signal(SIGINT,sighand);
   char buffer[BUFFER_SIZE], state[2];
   int server_socket, stage = 0;
   if (argc == 2) server_socket = client_setup( argv[1]);
