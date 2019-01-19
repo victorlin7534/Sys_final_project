@@ -2,10 +2,10 @@
 
 void sighand(int sig){
   if (sig == SIGINT){
-    printf("Wow... giving up already?\n What a disappointment\n");
+    printf("\nWow... giving up already?\n What a disappointment\n");
     if(!fork()) execlp("rm","rm","-rf","temp.c",NULL);
     else wait(0);
-    printf("Finished cleaning up the mess you made.\n");
+    printf("=====Cleaning Up The Mess You Made.=====\n");
     exit(0);
   }
 }
