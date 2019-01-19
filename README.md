@@ -21,6 +21,7 @@
 <errno.h>
 <fcntl.h>
 <ifaddrs.h>
+<math.h>
 ```
 
 ## Usage
