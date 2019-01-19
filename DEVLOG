@@ -7,20 +7,26 @@ Final Project Devlog
 Date - Work
 12/27/18 - Created Repo and DESIGN doc
 
-1/8/18 - Fixed Design issues, updated DESIGN doc
+1/8/18 - Fixed Design issues, updated DESIGN doc (Victor Lin)
 
-1/10/19 - Added server, question skeletons, and question drivers
+1/10/19 - Added server, question skeletons, and question drivers (Victor Lin, Jason Tung, Larry Wong)
 
-1/11/19 - Worked on server and added more skeletons
+1/11/19 - Worked on server and added more skeletons (Victor Lin, Jason Tung, Larry Wong)
 
-1/13/19 - Fixing server bugs
+1/13/19 - Fixing server bugs ((Victor Lin, Larry Wong)
 
-1/14/19 - Fixing server bugs and question drivers
+1/14/19 - Fixing server bugs and question drivers (Victor Lin, Jason Tung, Larry Wong)
 
-1/16/19 - Fixing server bugs, redesigned server functionality, and added file copying system
+1/16/19 - Fixing server bugs, redesigned server functionality, and added file copying system (Victor Lin, Jason Tung, Larry Wong)
 
-1/16/19 - Updated README doc
+1/16/19 - Updated README doc (Larry Wong)
 
-1/17/18 - Fixed server and client connectivity, server deletes user file once user disconnects, added signal handling, and worked on file transfer.
+1/17/19 - Fixed server and client connectivity, server deletes user file once user disconnects, added signal handling, and worked on file transfer. (Victor Lin, Jason Tung, Larry Wong)
 
+1/18/19 - Compiles code and runs it (Victor Lin, Jason Tung, Larry Wong)
 
+1/18/19 - Fixed server read and write (Victor Lin, Jason Tung, Larry Wong)
+
+1/18/19 - Fixed memory issues (Victor Lin, Larry Wong)
+
+1/18/19 - Fixed "forever idle" server after first user input (Victor Lin, Larry Wong)
