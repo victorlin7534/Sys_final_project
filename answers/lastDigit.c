@@ -33,10 +33,10 @@ int main(){
   test(223,332,0);
   printf("%d/%d CASES PASSED\n",passed,tested);
     
-  int fileint = open("output", O_CREAT | O_RDWR | O_TRUNC, S_IWUSR | S_IXUSR | S_IRUSR);
-  char * passstr = malloc(999);
+  int fileint = open("output", O_CREAT | O_RDWR,0644);
+  char * passstr = malloc(1);
   sprintf(passstr, "%d", passed);
-  write(fileint, passstr, 999);
+  write(fileint, passstr, 1);
   close(fileint);
   return 1;
 

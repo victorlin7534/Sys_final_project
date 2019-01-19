@@ -8,25 +8,25 @@ void sighand(int sig){
     exit(0);
   }
 }
+
 void subserver(int client_socket) {
   char buffer[BUFFER_SIZE], pid[50];
   sprintf(pid,"%d",getpid());
   char loc[128]; strcat(loc,"temp/"); strcat(loc,pid);
-  int status;
 
   if(!fork()) execlp("/bin/mkdir","mkdir",loc,NULL);
-  else wait(&status);
+  else wait(0);
   
   strcat(loc,"/drivers/");
   if(!fork()) execlp("/bin/mkdir","mkdir",loc,NULL);
-  else wait(&status);
+  else wait(0);
   
-  while (read(client_socket, buffer, sizeof(buffer))) {
+  while(read(client_socket, buffer,1)) {
     char question[25];
     strcpy(question,question_names[atoi(buffer)]);
     char q[50] = "questions/";
     strcat(q,question);
-    
+
     int temp = open(q,O_RDONLY);
     read(temp,buffer,sizeof(buffer));
     write(client_socket, buffer, strlen(buffer));
@@ -36,7 +36,6 @@ void subserver(int client_socket) {
     strcat(loc,question);
     temp = open(loc,O_CREAT|O_WRONLY,0644);
     write(temp,buffer,strlen(buffer));
-    printf("%s",buffer);
     close(temp);
 
     char r[50];
@@ -44,33 +43,27 @@ void subserver(int client_socket) {
     char newloc[50] = "temp/"; strcat(newloc,pid);
     strcat(r,question);
     if(!fork()) execlp("/bin/cp","cp",r,newloc,NULL);
-    else wait(&status);
+    else wait(0);
 
     chdir(newloc);
     
     if(!fork()) execlp("gcc","gcc",question,NULL);
-    else wait(&status);
+    else wait(0);
     if(!fork()) execlp("./a.out", "./a.out", NULL);
-    else wait(&status);
-
-    printf("gt");
-    chdir("../");
+    else wait(0);
 
     temp = open("output",O_RDONLY);
-    char buffer2[1];
-    read(temp,buffer2,1);
-    printf("%s",buffer2);
-    write(client_socket,buffer2,strlen(buffer2));
+    read(temp,buffer,1);
+    write(client_socket,buffer,strlen(buffer));
     close(temp);
 
-    chdir("../");
-
+    chdir("../../");
   }
   close(client_socket);
   char path[50] = "temp/";
   strcat(path,pid);
   if(!fork()) execlp("rm","rm","-rf",path,NULL);
-  else wait(NULL);
+  else wait(0);
   exit(0);
 }
 
@@ -99,9 +92,8 @@ void get_ip(){
 
 int main() {
   signal(SIGINT,sighand);
-  int status;
   if(!fork()) execlp("/bin/mkdir","mkdir","temp",NULL);
-  else wait(&status);
+  else wait(0);
   int listen_socket = server_setup();
   get_ip();
   while (1){
