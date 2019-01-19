@@ -4,6 +4,7 @@ char *question_names[6] = {"sum.c","diff21.c","gcf.c","lastDigit.c","nearHundred
 
 void sighand(int sig){
   if (sig == SIGINT){
+    printf("\nClosing up shop!\n");
     if (!fork()) execlp("rm","rm","-rf","temp",NULL);
     exit(0);
   }
