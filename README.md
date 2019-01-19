@@ -24,7 +24,7 @@
 ```
 
 ## Usage
-#### 1) type $make into bash<br />2) type $./server into bash<br />3) type $./user "server ip" into bash on a different session<br />4) user session automatically opens a text editor with a prompt<br />5) when user is finished coding, he/she can save and exit the text editor, and the program will resume.<br />6) if user's solution is correct, the next prompt appears. Else, the user must redo the problem.
+#### 1) type $make into bash<br />2) type $./server into bash<br />3) type $./user "server ip" into bash on a different session or $./user if sesstions are on the same computer<br />4) user session automatically opens a text editor with a prompt<br />5) when user is finished coding, he/she can save and exit the text editor, and the program will resume.<br />6) if user's solution is correct, the next prompt appears. Else, the user must redo the problem.
 
 
  
